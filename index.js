@@ -26,8 +26,8 @@ connectDB() ;
 
 
 app.use('/' , routeFiles) ; 
-app.use('/files' ,routeShowFiles ) ;
-app.use('/files/download' ,routeDownloadFiles ) ;
+app.use('/api/files' ,routeShowFiles ) ;
+app.use('/api/files/download' ,routeDownloadFiles ) ;
 
 
 
