@@ -61,7 +61,7 @@ router.post('/api/files' , (req ,res)=>{
 })
 
 
-router.post('/api/files/send' , async(req , res)=>{
+router.post('/send' , async(req , res)=>{
 
 
    
