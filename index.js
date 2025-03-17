@@ -26,7 +26,7 @@ const connectDB = require('./config/db') ;
 connectDB() ; 
 
 
-app.use('/api' , routeFiles) ; 
+app.use('/' , routeFiles) ; 
 app.use('/api/files' ,routeShowFiles ) ;
 app.use('/api/files/download' ,routeDownloadFiles ) ;
 
