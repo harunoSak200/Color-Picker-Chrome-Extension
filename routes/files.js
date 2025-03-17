@@ -19,7 +19,7 @@ let upload = multer({
     limit : {fileSize : 1000000 * 100}
 }).single('myfile') ;
 
-router.post('/files' , (req ,res)=>{
+router.post('/api/files' , (req ,res)=>{
      
      upload(req , res , async(err)=>{
             
