@@ -1,7 +1,6 @@
 require('dotenv').config(); // Load environment variables from .env file
 
 const express = require('express') ;  
-const serverless = require('serverless-http');
 const routeFiles = require('./routes/files')
 const routeShowFiles = require('./routes/showFile')
 const routeDownloadFiles = require('./routes/downloads') ; 
@@ -36,5 +35,3 @@ app.listen(port) ;
 
 
 
-// module.exports = app;
-// module.exports.handler = serverless(app);
