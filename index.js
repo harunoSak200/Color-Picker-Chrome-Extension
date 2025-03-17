@@ -29,7 +29,7 @@ connectDB() ;
 
 app.use('/' , routeFiles) ; 
 app.use('/files' ,routeShowFiles ) ;
-app.use('/download' ,routeDownloadFiles ) ;
+app.use('/files' ,routeDownloadFiles ) ;
 
 
 app.listen(port) ; 
