@@ -6,7 +6,7 @@ const routeFiles = require('./routes/files')
 const routeShowFiles = require('./routes/showFile')
 const routeDownloadFiles = require('./routes/downloads') ; 
 const path = require('path')
-const port = 8000
+const port = process.env.PORT || 8000 ; 
 
 const app = express() ; 
 app.use(express.json()) ; 
