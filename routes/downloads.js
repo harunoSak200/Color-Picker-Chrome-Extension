@@ -3,7 +3,7 @@ const router = express.Router();
 const File = require('../models/file');
 
 
-router.get('/:uuid' , async(req , res)=>{
+router.get('/files/download/:uuid' , async(req , res)=>{
     const uid = (req.params.uuid); 
 
     const file = await File.findOne({uuid : uid})
