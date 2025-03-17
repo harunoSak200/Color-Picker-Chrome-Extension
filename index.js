@@ -32,6 +32,6 @@ app.use('/api/files' ,routeShowFiles ) ;
 app.use('/api/files/download' ,routeDownloadFiles ) ;
 
 
-app.listen(port) ; 
-// module.exports = app;
-// module.exports.handler = serverless(app);
+// app.listen(port) ; 
+module.exports = app;
+module.exports.handler = serverless(app);
