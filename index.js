@@ -6,6 +6,7 @@ const routeFiles = require('./routes/files')
 const routeShowFiles = require('./routes/showFile')
 const routeDownloadFiles = require('./routes/downloads') ; 
 const path = require('path')
+const port = 8000
 
 const app = express() ; 
 app.use(express.json()) ; 
@@ -31,6 +32,6 @@ app.use('/api/files' ,routeShowFiles ) ;
 app.use('/api/files/download' ,routeDownloadFiles ) ;
 
 
-
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen(port) ; 
+// module.exports = app;
+// module.exports.handler = serverless(app);
