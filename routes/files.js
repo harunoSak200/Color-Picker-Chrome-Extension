@@ -20,11 +20,10 @@ let upload = multer({
 }).single('myfile') ;
 
 router.post('/files' , (req ,res)=>{
-    console.log(req.file) ; 
-  
+     
      upload(req , res , async(err)=>{
             
-            console.log(req.file) ; 
+            console.log('This is the file -->>' , req.file) ; 
              
             if(!req.file)
             {
