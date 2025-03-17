@@ -5,6 +5,7 @@ const routeFiles = require('./routes/files')
 const routeShowFiles = require('./routes/showFile')
 const routeDownloadFiles = require('./routes/downloads') ; 
 const path = require('path')
+const cors = require('cors')
 const port = process.env.PORT || 8000 ; 
 
 const app = express() ; 
@@ -15,15 +16,16 @@ app.set('view engine' , 'ejs') ;
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-
-
-
-
-
 const PORT = process.env.PORT || 8000;
 
 const connectDB = require('./config/db') ; 
 connectDB() ; 
+
+// cors - middleware : 
+const corsOptions = {
+    orgin: process.env.ALLOWED_CLIENTS.split(',')
+}
+app.use(cors(corsOptions)) ; 
 
 
 app.use('/' , routeFiles) ; 
